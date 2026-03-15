@@ -42,7 +42,7 @@ jobs:
       # Mengambil kode dari repository GitHub ke server CI.
       # Menyimpan file antar job
       - name: Upload processed dataset as artifact
-        uses: actions/upload_artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: processed-datasets
           path: preprocessing/diamond_preprocessing
