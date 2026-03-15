@@ -1,0 +1,14 @@
+# File ini berfungsi untuk memberi tahu MLflow bagaimana menjalankan project ML kamu.
+# cara menjalankan training model
+
+# Nama project MLflow
+name: diamond-ml
+
+# Entry point itu seperti fungsi utama yang dijalankan MLflow.
+entry_points: 
+  main:
+    parameters: # Artinya model punya parameter yang bisa diubah:
+      n_estimators: {type: int, default: 100}
+      max_depth: {type: 1, default: -1}
+    command: >
+      python modelling.py --n_estimators {n_estimators} --max_depth {max_depth}

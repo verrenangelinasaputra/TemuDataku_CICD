@@ -1,0 +1,20 @@
+# File conda.yml digunakan oleh Anaconda supaya semua orang yang
+# menjalankan project punya library yang sama.
+
+# Nama environment
+name: diamond-env
+
+# Conda akan mencari package dari channel ini:
+# (1) repository resmi Conda
+# (2) repository komunitas yang lebih lengkap
+channels:
+  - defaults
+  - conda-forge
+
+# Environment ini akan menginstall:
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - -r ../requirements.txt
+  # Setelah pip terinstall, pip akan membaca file requirements.txt dan install semua library di file itu
